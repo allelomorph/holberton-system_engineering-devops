@@ -2,4 +2,4 @@
 
 Learning best practices in the course of these first few exercises.
 
-For example, 0x00 was roginally pushed as a group of 18 tasks, and then correcting errors common amongst all the tasks casued a lot of wasted time. Will commit and push in smaller batches today to seee how that affects time management.
+For example, 0x00 was originally pushed as a group of 18 tasks, and then correcting errors common amongst all the tasks caused a lot of wasted time. Will commit and push in smaller batches today to seee how that affects time management.
