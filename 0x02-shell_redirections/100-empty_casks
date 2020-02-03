@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -empty -printf "%s\t%f\n" | cut -f2
+find . -size 0c -printf "%f\n"
