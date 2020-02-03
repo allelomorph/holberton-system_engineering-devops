@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -c 1 An\ Acrostic | tr -d '\n'; echo
+cat | cut -c 1 | tr -d '\n'; echo
