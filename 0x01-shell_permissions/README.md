@@ -112,8 +112,9 @@ What you should learn from this project:
 * Create a man page that looks exactly like this one and passes all checks.
   * A new line is not necessary at the end of this file, refer to the output of `wc`, as shown below.
 ```ubuntu@ip-172-31-63-244:/tmp/man$ wc 101-man_holberton
- 16  89 608 101-man_holberton
-ubuntu@ip-172-31-63-244:/tmp/man$ man ./101-man_holberton```
+16  89 608 101-man_holberton
+ubuntu@ip-172-31-63-244:/tmp/man$ man ./101-man_holberton
+```
 ![holberton man page](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/207/man_holberton.PNG)
 
 
