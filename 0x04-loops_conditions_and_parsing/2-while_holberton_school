@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+i=10
+while (( i > 0 )); do echo 'Holberton School'; ((i--)); done
+unset i

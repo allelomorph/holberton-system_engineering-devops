@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Displays files info abotu file status of `holbertonschool`
+FILE=holbertonschool
+if test -e "$FILE"; then
+    echo $FILE 'file exists'
+    if test -s "$FILE"; then  # size > 0 / not empty
+	echo $FILE 'file is not empty'
+    else
+	echo $FILE 'file is empty'
+    fi
+    if test -f "$FILE"; then  # regular file
+	echo $FILE 'is a regular file'
+    fi
+else
+    echo $FILE 'file does not exist'
+fi

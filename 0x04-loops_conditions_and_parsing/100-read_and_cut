@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Displays fields 1,3 and 6 of /etc/passwd
+FILE=/etc/passwd
+while read LINE; do
+    echo "$LINE" | cut -f 1,3,6 -d ':'
+done < $FILE
