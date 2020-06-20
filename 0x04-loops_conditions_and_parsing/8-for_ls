@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Displays all but the 1st field of all filenames that are '-' delimited
-for filename in ./*; do
+for filename in *; do
     echo "$filename" | cut -f2 -d '-'; done
