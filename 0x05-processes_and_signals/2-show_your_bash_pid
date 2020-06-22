@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# using custom output from task 1, filter for mentions of bash
+# ps --forest -eo user,pid,%cpu,%mem,vsz,rss,tname,stat,start_time,bsdtime,command | grep bash | tail -n +2
+# shellcheck disable=SC2009
+ps aux --forest | grep bash | tail -n +2

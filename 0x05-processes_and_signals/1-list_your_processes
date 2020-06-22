@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# displays custom output of process tree information
+# ps --forest -eo user,pid,%cpu,%mem,vsz,rss,tname,stat,start_time,bsdtime,command
+ps aux --forest

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# prints 'To infinity and beyond' in infinite loop with 2 sec delay, cannot be terminated
+trap "echo 'I am invincible!!!'" SIGTERM
+while ((1)); do
+    echo 'To infinity and beyond'
+    sleep 2
+done
