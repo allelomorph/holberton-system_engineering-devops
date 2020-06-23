@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# infinitely adds 'I am alive!' every two seconds to /tmp/my_process
+# trap 'kill $(jobs -p)' EXIT
+while ((1)); do
+    echo 'I am alive!' >> /tmp/my_process
+    sleep 2
+done
