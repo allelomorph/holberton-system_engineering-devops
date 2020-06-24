@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Displays files info abotu file status of `holbertonschool`
+# Displays files info about file status of `holbertonschool`
 FILE=holbertonschool
 if test -e "$FILE"; then
     echo $FILE 'file exists'
