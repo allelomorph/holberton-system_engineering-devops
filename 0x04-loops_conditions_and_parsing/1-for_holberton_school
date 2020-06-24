@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying "Holberton School" 10 times
-# shellcheck disable=SC2034
-for i in {0..9}; do echo 'Holberton School'; done
-unset i
+# This script is displaying "Holberton School" 10 times.
+# _ is a special disposable variable in bash, while $_ returns the most recent parameter
+# https://stackoverflow.com/questions/5163144/what-are-the-special-dollar-sign-shell-variables
+for _ in {0..9}; do echo 'Holberton School'; done
