@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Pings IP address or URL in first arg 5 times
+# Pings IP address or URL in first arg 5 times, error msg if not 1 arg
 if (($# != 1));
     then echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
 else
