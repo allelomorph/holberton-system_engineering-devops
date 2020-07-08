@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# displays all active IPv4 IPs for the local machine (ifconfig obs., use `ip`)
+ifconfig | awk -F "[: ]+" '/inet addr:/ { print $4 }'
