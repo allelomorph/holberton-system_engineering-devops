@@ -1,0 +1,46 @@
+0. Simple web stack 
+
+You must use:
+
+    1 server
+    1 web server (Nginx)
+    1 application server
+    1 application files (your code base)
+    1 database (MySQL)
+    1 domain name foobar.com configured with a www record that points to your server IP 8.8.8.8
+
+
+You must be able to explain some specifics about this infrastructure:
+
+    What is a server
+	-- A physical or virtual machine that hosts server software
+
+    What is the role of the domain name
+	-- A means of creating an address that is more memorable and interpretable to humans than just the raw IP
+
+    What type of DNS record www is in www.foobar.com
+	-- CNAME, Canonical Name Record: it makes `www.foobar.com` an alias for `foobar.com`
+
+    What is the role of the web server
+	-- Serving HTML and CSS and images to users, either from static source or dynamically generated 
+
+    What is the role of the application server
+	-- Holds codebase for backend operations, templates for dynamically generated HTML and CSS, and other files.
+
+    What is the role of the database
+	-- Organized realtional model of data that can be structurally queried. Returns from queries can be processed by the application server to then return data to the web server to format into web pages. 
+
+    What is the server using to communicate with the computer of the user requesting the website
+	-- HTTP hypertext transfer protocol, over the internet
+
+
+You must be able to explain what the issues are with this infrastructure:
+
+    SPOF
+	-- Both network link to server, server hardware itself/virtual box in cloud.
+
+    Downtime when maintenance needed (like deploying new code web server needs to be restarted)
+	-- The code for every layer of the stack only resides in one location each, thus any updates will bring the whole site down.
+
+    Cannot scale if too much incoming traffic
+	-- Only one server, no load balancing.
