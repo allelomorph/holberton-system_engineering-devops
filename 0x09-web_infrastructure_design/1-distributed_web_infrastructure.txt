@@ -1,0 +1,45 @@
+1. Distributed web infrastructure mandatory
+
+You must add:
+    2 servers
+    1 web server (Nginx)
+    1 application server
+    1 load-balancer (HAproxy)
+    1 set of application files (your code base)
+    1 database (MySQL)
+
+
+You must be able to explain some specifics about this infrastructure:
+
+    For every additional element, why you are adding it
+        -- 2 servers: one for database server, one as duplicate machine for web and application servers
+        -- 1 web server (Nginx): redundancy for web server in single LAMP stack
+        -- 1 application server: redundancy for application server in single LAMP stack
+        -- 1 set of application files (your code base): redundancy for code base in single LAMP stac
+        -- 1 database (MySQL): replica for primary DB in single LAMP stack
+        -- 1 load-balancer (HAproxy): even distribution of requests to web servers A and B
+	
+    What distribution algorithm your load balancer is configured with and how it works
+	-- HAproxy can use several, but defualts to a dynamically weighted round-robin. This means that the LB listens to monitoring to assign weights to each server on every rotation through the list. Given that there is no monitoring in this scheme, it may effectively act like a unweighted (1:1) round robin.
+
+    Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both
+	-- Only one LB here, so assuming that this refers to web/application servers. Choosing an active/active setup with single redundancy. Active/active refers to balancing use across parallel redundant servers, where active/passive has the rudundancy waiting and listening, only taking requests upon failure of the primary server. 
+
+    How a database Primary-Replica (Master-Slave) cluster works
+	-- One DB is identified as the primary node, and this is the only one that can take both read and write requests. Replica nodes are entire copies of the primary node, are updated constantly as the primary changes, and only take read requests to keep a single point of truth.
+
+    What is the difference between the Primary node and the Replica node in regard to the 
+application
+	-- Primary can take read and write requests, replica only read requests. Primary is the original and single source of truth, replica is a working backup of that data.
+
+
+You must be able to explain what the issues are with this infrastructure:
+
+    Where are SPOF
+	-- Incoming network connection to LB, single LB itself. Single server hosts both copies of DB.
+
+    Security issues (no firewall, no HTTPS)
+	-- No filtering of incoming requests, plain HTTP traffic could be sniffed.
+
+    No monitoring
+	-- Which means that the LB can't do dynamic weighting of the round robin algo, and while the system wouldn't fail if either of the non-DB servers went down, there would be slowdown.

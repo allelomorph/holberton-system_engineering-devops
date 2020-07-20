@@ -1,0 +1,13 @@
+3. Scale up
+
+You must add:
+    1 server
+    1 load-balancer (HAproxy) configured as cluster with the other one
+    Split components (web server, application server, database) with their own server
+
+You must be able to explain some specifics about this infrastructure:
+
+    For every additional element, why you are adding it
+    	-- 1 server: a new total of 4 hardware hosts allows for redistribution of server software.
+    	-- 1 load-balancer (HAproxy) configured as cluster with the other one: load balancing can be set to active/passive, with second LB as failover redundancy.
+    	-- Split components (web server, application server, database) with their own server: With only 4 servers to allocate, chose to make the web server the one with redundancy to handle more simultaneous requests.

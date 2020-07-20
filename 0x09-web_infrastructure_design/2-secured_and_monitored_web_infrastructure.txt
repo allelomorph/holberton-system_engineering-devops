@@ -1,0 +1,42 @@
+2. Secured and monitored web infrastructure
+
+You must add:
+    3 firewalls
+    1 SSL certificate to serve www.foobar.com over HTTPS
+    3 monitoring clients (data collector for Sumologic or other monitoring services)
+
+
+You must be able to explain some specifics about this infrastructure:
+
+    For every additional element, why you are adding it
+	-- 3 firewalls: one to limit attacks to the load balancer, and one each to act as a second layer of protection for each of the web server access, 
+    	-- 1 SSL certificate to serve www.foobar.com over HTTPS: to encrypt packets going between users via the internet and oru load balancer
+    	-- 3 monitoring clients (data collector for Sumologic or other monitoring services): reporting on operational health of both web/application servers plus the DB server for external montitoring to respond to failures, or sent to load balancer to calibrate dynamic weighting of round robin alogrithm
+	
+
+    What are firewalls for
+	-- Filtering packets by predefined criteria to limit access to a node/subnet.
+
+    Why is the traffic served over HTTPS
+	-- So that it appears encrypted in transit. Plain HTTP is seen as-is by anyone who can intercept packets sent bewtween user to service. This could reveal sensitive information and lead to identity theft, for example.
+
+    What monitoring is used for
+	-- In this scheme, to calibrate dynamic weighting of the round robin load balancing algorithm. Other uses generally relate to high-availability architectural goals, like keeping track of error totals and types for web server software and server hardware/virtual hardware.
+
+    How the monitoring tool is collecting data
+	-- By recording the access and error logs of the server software. These logs can be analysed with regex patterns for trends.
+
+    Explain what to do if you want to monitor your web server QPS
+	-- Nginx with the HttpStubStatusModule can return some monitoring stats, but it looks like to monitor Queries Per Second it would be better to run something like mytop on the database server to monitor incoming requests to the MySQL primary and replica DBs.
+
+
+You must be able to explain what the issues are with this infrastructure:
+
+    Why terminating SSL at the load balancer level is an issue
+	-- Traffic between LB and server is unencrypted, making session hijacking and  man-in-the-middle attacks easier. Server must share private key with the LB tool, which is risky if it is a third party service. You would also lose access to the client certificates that could be used for mapping to known users in an identity repository.  
+
+    Why having only one MySQL server capable of accepting writes is an issue
+	-- While a single point of truth to avoid data conflicts, it creates a bottleneck for write queries. The replica DB is a redundancy of the data recorded, but not an operational backup until it can take write queries.
+
+    Why having servers with all the same components (database, web server and application server) might be a problem
+	-- If one were to configure that way, with multiple servers each with a full LAMP stack, then there would be the risk of muliple points of truth for the database. Additionally, the web and application server software could end up competing for computing resources with the database server.
