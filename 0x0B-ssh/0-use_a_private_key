@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# secure shell for user `ubuntu` into 35.196.139.2 using `holberton` identity
+ssh -i ~/.ssh/holberton ubuntu@35.196.139.2
