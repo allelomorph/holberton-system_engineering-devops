@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#create a new private key of 4096 bits in file `holberton`, passphrase 'betty'
+ssh-keygen -t rsa -b 4096 -N betty -f holberton
