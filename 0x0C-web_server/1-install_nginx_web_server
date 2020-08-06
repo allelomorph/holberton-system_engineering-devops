@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# DevOps 0x0C. Web server - task 1. Install nginx web server
 # installs nginx web server, listening on port 80; dummy index page
 apt-get -y update
 apt-get -y install nginx
 echo "Holberton School" > /var/www/html/index.html
-service nginx start
+service nginx restart
