@@ -1,5 +1,4 @@
 # holberton-system_engineering-devops
-# 0x0C. Web server
 
 ## Description
 Bash shell scripts from early in the first trimester in Holberton's core curriculum. One directory per project, mandatory tasks are files `?-*`, advanced tasks `???-*`.
