@@ -5,6 +5,6 @@ apt-get -y install nginx
 
 echo "Holberton School" > /var/www/html/index.html
 
-sed -i "/listen \[::]:80 default_server;/a\	rewrite ^/redirect_me https://www.youtube.com/watch?v=mTEros927Ow permanent;" /etc/nginx/sites-available/default
+sed -i "/listen \[::]:80 default_server;/a\	rewrite ^/redirect_me/?.*$ https://www.youtube.com/watch?v=mTEros927Ow permanent;" /etc/nginx/sites-available/default
 
 service nginx start
