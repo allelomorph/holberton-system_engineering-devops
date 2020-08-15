@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# 0x0F. Load balancer - 1. Install your load balancer
+# installs and configures HAproxy with a round-robin algorithm
+apt-get -y update
+apt-get -y install software-properties-common
+add-apt-repository -y ppa:vbernat/haproxy-1.8
+apt-get -y update
+apt-get -y install haproxy=1.8.\*
+
+bash -c 'echo "
+frontend haproxy_node
+	 bind *:80
+	 mode http
+	 default_backend backend_nodes
+
+backend backend_nodes
+	balance roundrobin
+	server 1690-web-01 34.75.227.236
+	server 1690-web-02 54.234.168.105
+" >> /etc/haproxy/haproxy.cfg'
+
+service haproxy restart
