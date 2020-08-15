@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# 0x0F. Load balancer - 0. Double the number of webservers
 # setup nginx web server, including 301 redirect, 404, and HTTP response header
 apt-get -y update
 apt-get -y install nginx
