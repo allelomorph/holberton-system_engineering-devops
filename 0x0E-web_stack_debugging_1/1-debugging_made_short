@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# container-specific fix to restore nginx service listening (only) on port 80
-pkill nginx
+# restore nginx service listening on port 80, but invisible to `service`
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
+rm /run/nginx.pid
