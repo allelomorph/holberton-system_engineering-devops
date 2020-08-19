@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# ouptuts DNS record information for given subdomain, or all if none provided
+subd_print ()
+{
+    echo -n "The subdomain ""$2"
+    dig "$2"".""$1" +noall +answer | awk 'NF==5 {print " is a", $(NF-1), "record and points to", $NF}'
+}
+
+if [[ $2 ]]; then
+    subd_print "$1" "$2"
+elif [[ $1 ]]; then
+    for sub_d in 'www' 'lb-01' 'web-01' 'web-02'; do
+	subd_print "$1" "$sub_d"
+	done
+fi
