@@ -64,5 +64,5 @@ backend backend_nodes
         # with a "bind" line having the "ssl" option.
         redirect scheme https code 301 if !{ ssl_fc }
         balance roundrobin
-        server 1690-web-01 34.75.227.236:80 check
+        server 1690-web-01 35.196.49.136:80 check
         server 1690-web-02 54.234.168.105:80 check
