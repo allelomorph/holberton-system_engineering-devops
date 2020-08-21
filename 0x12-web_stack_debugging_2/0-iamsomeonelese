@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# runs `whoami` as user in first parameter, if user exists
+user_array="$(compgen -u | tr '\n' ' ')"
+if [[ $1 && ${user_array[*]} =~ (^|[[:space:]])$1($|[[:space:]]) ]]; then
+    sudo -u "$1" whoami; fi  # case sensitive regex check
