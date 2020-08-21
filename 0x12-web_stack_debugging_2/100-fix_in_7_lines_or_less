@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# quick and less unsustainable way to get nginx running as user `nginx`
+pkill apache2
+sed -i "s/80 default_serv/8080 default_serv/" /etc/nginx/sites-available/default
+sed -i '/user www-data;$/a user nginx;' /etc/nginx/nginx.conf
+chown nginx:nginx /etc/nginx/nginx.conf
+chmod 644 /etc/nginx/nginx.conf
+sudo -u nginx service nginx restart
