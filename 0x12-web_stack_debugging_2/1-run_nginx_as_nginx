@@ -3,7 +3,8 @@
 apache_pid="$(pgrep apache2 | head -n 1)"
 echo "$apache_pid" > /run/apache2/apache2.pid
 service apache2 stop
-sed -i "s/80 default_server/8080 default_server/" /etc/nginx/sites-available/default
+sed -i "s/80 default_server/8080 default_server/" \
+    /etc/nginx/sites-available/default
 chmod 777 /etc/nginx/nginx.conf
 chown nginx /etc/nginx/nginx.conf
 chgrp nginx /etc/nginx/nginx.conf
