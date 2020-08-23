@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# quick (and less unsustainable) way to get nginx running as user `nginx`
+# quick (but less sustainable) way to get nginx running as user `nginx`
 pkill apache2
 sed -i "s/80 default_serv/8080 default_serv/" /etc/nginx/sites-available/default
 chmod 666 /etc/nginx/nginx.conf
