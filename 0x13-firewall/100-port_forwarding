@@ -10,7 +10,7 @@
 
 # Don't delete these required lines, otherwise there will be errors
 
-# to redirect requests from prot 8080 to port 80
+# to redirect requests from port 8080 to port 80
 # also requires "net.ipv4.ip_forward=1" in /etc/sysctl.conf
 *nat
 :PREROUTING ACCEPT [0:0]
