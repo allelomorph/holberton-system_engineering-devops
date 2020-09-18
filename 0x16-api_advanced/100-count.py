@@ -10,18 +10,21 @@ def count_words(subreddit, word_list, word_totals={}, after=''):
     given subreddit.
 
         Recursively queries Reddit API, one page per frame, to parse titles of
-    all "hot" posts to tally occurances of each word in a given list of
-    search terms. Once finished, prints all non-zero totals in descending
-    order by count, and then in alphabetic order.
+    all "hot" posts and count occurances of each word in a given list of
+    search terms. Once finished, prints all non-zero totals sotrted first in
+    descending order by count, and then in alphabetic order.
 
     Args:
         subreddit (str): subreddit to query
         word_list (list): list of words to search for in titles of all posts
-    in "hot"
+           in "hot"
+        word_totals (dict): running total of search term occurances prior to
+            current page/frame
+        after (str): API name for last post in previous page
 
     Return:
-        dict of running word totals from titles in all API pages parsed in this
-    frame and those lower in stack
+        dict of running word totals from titles in all API pages parsed in
+    current recursion frame and those below
     """
     limit = 100
     # (adding request parameter raw_json deactivates default ampersand escape)
