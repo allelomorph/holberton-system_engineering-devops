@@ -5,19 +5,14 @@ from re import findall
 from requests import get
 
 
-def word_count_sort(item):
-    """ Sorts dict items first by value in descending order, then by key in
-    ascending alpha order.
-    """
-    word = item[0]
-    count = item[1]
-    return (-count, word)
-
-
 def count_words(subreddit, word_list, word_totals={}, after=''):
-    """ Recursively queries Reddit API, one page per frame, to parse titles of
+    """ Tallies appearances of search terms in all "hot" post titles for a
+    given subreddit.
+
+        Recursively queries Reddit API, one page per frame, to parse titles of
     all "hot" posts to tally occurances of each word in a given list of
-    search terms.
+    search terms. Once finished, prints all non-zero totals in descending
+    order by count, and then in alphabetic order.
 
     Args:
         subreddit (str): subreddit to query
@@ -25,10 +20,10 @@ def count_words(subreddit, word_list, word_totals={}, after=''):
     in "hot"
 
     Return:
-        `hot_list` with the current API page/recursion frame's list appended
+        dict of running word totals from titles in all API pages parsed in this
+    frame and those lower in stack
     """
     limit = 100
-    # print(after, sum(word_totals.values()))
     # (adding request parameter raw_json deactivates default ampersand escape)
     url = 'https://www.reddit.com/r/{}/hot.json?raw_json=1&after={}&limit={}'
     response = get(url.format(subreddit, after, limit),
@@ -36,10 +31,9 @@ def count_words(subreddit, word_list, word_totals={}, after=''):
 
     # 404 or other error, or no search terms
     if response.status_code != 200 or len(word_list) == 0:
-        # print()
         return
 
-    regex = '^{} +| +{} +| +{}$'
+    regex = '^{}$|^{} +| +{} +| +{}$'
     word_count = dict.fromkeys(word_list, 0)
     current_page_list = response.json().get('data').get('children', [])
 
@@ -47,12 +41,10 @@ def count_words(subreddit, word_list, word_totals={}, after=''):
     for post in current_page_list:
         title = post.get('data').get('title', '')
         for word in word_list:
-            count = len(findall(regex.format(word, word, word), title))
-            # if count > 0:
-            #     print(title, word, count)
+            count = len(findall(regex.format(word, word, word, word), title))
             word_count[word] += count
 
-    # update grand totals
+    # update totals
     for key, value in word_count.items():
         if key in word_totals:
             word_totals[key] += value
@@ -61,13 +53,12 @@ def count_words(subreddit, word_list, word_totals={}, after=''):
 
     # last page reached, print totals
     if len(current_page_list) < limit:
-        for item in sorted(word_totals.items(), key=word_count_sort):
-            # key=lambda item: (-item[1], item[0])):
+        for item in sorted(word_totals.items(),
+                           key=lambda item: (-item[1], item[0])):
             if item[1] > 0:
                 print('{}: {}'.format(item[0], item[1]))
-        # if sum(word_totals.values()) == 0:
-        #     print()
         return
 
+    # still more titles to parse, recurse to next frame
     after = current_page_list[-1].get('data').get('name', '')
     return count_words(subreddit, word_list, word_totals, after)
