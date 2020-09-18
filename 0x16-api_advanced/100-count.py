@@ -36,7 +36,7 @@ def count_words(subreddit, word_list, word_totals={}, after=''):
 
     # 404 or other error, or no search terms
     if response.status_code != 200 or len(word_list) == 0:
-        print()
+        # print()
         return
 
     regex = '^{} +| +{} +| +{}$'
@@ -65,8 +65,8 @@ def count_words(subreddit, word_list, word_totals={}, after=''):
             # key=lambda item: (-item[1], item[0])):
             if item[1] > 0:
                 print('{}: {}'.format(item[0], item[1]))
-        if sum(word_totals.values()) == 0:
-            print()
+        # if sum(word_totals.values()) == 0:
+        #     print()
         return
 
     after = current_page_list[-1].get('data').get('name', '')
