@@ -23,7 +23,6 @@ def recurse(subreddit, hot_list=[]):
     response = get(url.format(subreddit, after, limit),
                    headers={'User-Agent': 'allelomorph-app2'})
     if response.status_code != 200:
-        print("status:", response.status_code)
         return None
     current_page_list = response.json().get('data').get('children', [])
     if len(current_page_list) < limit:
