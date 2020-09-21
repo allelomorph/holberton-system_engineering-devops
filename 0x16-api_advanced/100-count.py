@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ 0x16. API advanced, task 3. Count it!
 """
-from re import findall
+from re import findall, IGNORECASE
 from requests import get
 
 
@@ -37,15 +37,16 @@ def count_words(subreddit, word_list, word_totals={}, after=''):
         return
 
     regex = '^{}$|^{} +| +{} +| +{}$'
-    word_count = dict.fromkeys(word_list, 0)
+    word_count = dict.fromkeys([word.lower() for word in word_list], 0)
     current_page_list = response.json().get('data').get('children', [])
 
     # search titles in current page for terms
     for post in current_page_list:
         title = post.get('data').get('title', '')
         for word in word_list:
-            count = len(findall(regex.format(word, word, word, word), title))
-            word_count[word] += count
+            count = len(findall(regex.format(word, word, word, word),
+                                title, IGNORECASE))
+            word_count[word.lower()] += count
 
     # update totals
     for key, value in word_count.items():
