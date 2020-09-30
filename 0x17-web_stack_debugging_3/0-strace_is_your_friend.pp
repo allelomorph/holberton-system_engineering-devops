@@ -3,6 +3,5 @@ file { '/var/www/html/wp-settings.php' :
 }
 -> exec { 'replace reference to /class-wp-locale.phpp':
   path    => '/usr/bin:/usr/sbin:/bin',
-  command => 'sed -i "s|/class-wp-locale.phpp|/class-wp-locale.php|" /var/www/html/wp-settings.php'
-,
+  command => 'sed -i "s|/class-wp-locale.phpp|/class-wp-locale.php|" /var/www/html/wp-settings.php',
 }
