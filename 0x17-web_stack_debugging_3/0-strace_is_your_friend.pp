@@ -1,3 +1,5 @@
+# task 0. Strace is your friend: repair LAMP stack server running wordpress
+
 file { '/var/www/html/wp-settings.php' :
   ensure  => file,
 }
