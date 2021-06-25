@@ -42,7 +42,7 @@ DevOps component of the Holberton school core curriculum, which covers shell scr
 ### 0x11. What happens when you type holbertonschool.com in your browser and press Enter
 This project did not have any code exercises, but instead consisted of a blog post and diagram concerning the classic interview question of how a web stack works in conjunction with the internet to visit an URL.
 
-### [0x12-web_stack_debugging_2](./0x12. Web stack debugging #2/)
+### [0x12. Web stack debugging #2](./0x12-web_stack_debugging_2/)
 
 ### [0x13. Firewall](./0x13-firewall/)
 
@@ -59,9 +59,9 @@ This project did not have any code exercises, but instead consisted of a blog po
 ### 0x19. Postmortem
 This project did not have any code exercises, but instead consisted of a writing assignment to practice producing a professional postmortem report of a failure from one of our web stack debugging projects, or one of our own experiences.
 
-### [0x1A-application_server](./0x1A. Application server/)
+### [0x1A. Application server](./0x1A-application_server/)
 
-### [0x1B-web_stack_debugging_4](./0x1B. Web stack debugging #4/)
+### [0x1B. Web stack debugging #4](./0x1B-web_stack_debugging_4/)
 
 ---
 
