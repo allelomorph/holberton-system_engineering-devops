@@ -1,7 +1,53 @@
 # holberton-system_engineering-devops
 
 ## Description
-DevOps component of the Holberton school core curriculum, which covers shell scripts, networking, and web stack debugging. One directory per project, mandatory tasks are files `?-*`, advanced tasks `???-*`.
+DevOps component of the Holberton school core curriculum, which covers shell scripts, networking, and web stack debugging.
+
+## General requirements
+
+### bash
+* Interpreter conditions:
+  * Ubuntu 14.04 LTS
+* First line of executable scripts will be `#!/bin/bash`
+
+### Python
+* Interpreter conditions:
+  * Ubuntu 14.04 LTS
+  * python3 (version 3.4.3)
+* First line of executable scripts will be `#!/usr/bin/python3`
+* Compliance with linter:
+  * `pep8` (version 1.7.*) (now known as `pycodestyle`)
+* Docstrings are expected to follow the [Google style guide](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html):
+  * Per module (`python3 -c 'print(__import__("my_module").__doc__)'`)
+  * Per class (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`)
+  * Per function
+    * both inside a class (`python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'`)
+    * and outside a class (`python3 -c 'print(__import__("my_module").my_function.__doc__)'`)
+* Test scripts will typically not be in same directory as the task solutions, use `export PYTHONPATH='.'` before running test scripts from project directory to allow includes
+* Unit tests will be required on some projects:
+  * using the [unittest module](https://docs.python.org/3.4/library/unittest.html#module-unittest)
+  * located in a `tests/` folder, with a file structure mimicing that of your project, but with a `test_` prefix added to all file/directory names
+  * tests should be capable of being run with `python3 -m unittest discover tests`, or individually per file with `python3 -m unittest <test file>`
+
+### Puppet
+* Interpreter conditions:
+  * Ubuntu 14.04 LTS
+  * Puppet 3.4.3
+* Puppet manifests must begin with a comment (`# `) explaining their intended use
+* Puppet manifests must end with the file extension `.pp`
+* Compliance with linter: `puppet-lint` version 2.1.1
+  * to install `puppet-lint`:
+```bash
+$ apt-get install -y ruby
+$ gem install puppet-lint -v 2.1.1
+```
+
+### Ruby
+* Interpreter conditions:
+  * Ubuntu 14.04 LTS
+  * Ruby 1.9.3p484
+* first line of all scripts should be exactly `#!/usr/bin/env ruby`
+* all regex patterns must be built for the Oniguruma library
 
 ---
 
@@ -65,5 +111,5 @@ This project did not have any code exercises, but instead consisted of a writing
 
 ---
 
-## Author
+## Student
 * **Samuel Pomeroy** - [allelomorph](github.com/allelomorph)
