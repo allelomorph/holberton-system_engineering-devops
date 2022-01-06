@@ -72,17 +72,23 @@ Further exploration of Ubuntu Linux shell variable assignment and arithmatic; in
 ### [(255) 0x05. Processes and signals](./0x05-processes_and_signals/)
 Intrduction to processes and signals in Linux, and the relevant Ubuntu shell commmands.
 
-### [0x06. Regular expression](./0x06-regular_expressions/)
+### [(78) 0x06. Regular expression](./0x06-regular_expressions/)
+Introduction to regular expressions, first in the context of Ruby scripts.
 
-### [0x07. Networking basics #0](./0x07-networking_basics/)
+### [(259) 0x07. Networking basics #0](./0x07-networking_basics/)
+Introduction to networking basics: the OSI model, LAN/WAN, MAC and IP (IPv4/IPv6) addresses, and TCP versus UDP.
 
-### [0x08. Networking basics #1](./0x08-networking_basics_2/)
+### [(285) 0x08. Networking basics #1](./0x08-networking_basics_2/)
+Further introduction to networking basics: localhost/`127.0.0.1`, `0.0.0.0`, `/etc/hosts`, and relevant Ubuntu Linux commands like `ifconfig`, `telnet`, and `nc`.
 
-### [0x09. Web infrastructure design](./0x09-web_infrastructure_design/)
+### [(302) 0x09. Web infrastructure design](./0x09-web_infrastructure_design/)
+Overview of web infrastructure basics: servers vs web servers, load balancers, firewalls, DNS record types, high availability clusters (active-active/active-passive,) and HTTPS. Drawing diagrams of the web stack built in previous projects in this track.
 
-### [0x0A. Configuration management](./0x0A-configuration_management/)
+### [(292) 0x0A. Configuration management](./0x0A-configuration_management/)
+Introduction to configuration management, continuous integration/continuous deployment, and using Puppet.
 
-### [0x0B. SSH](./0x0B-ssh/)
+### [(244) 0x0B. SSH](./0x0B-ssh/)
+Introduction to SSH basics: key pairs, authentication, and relevant Ubuntu Linux commands `ssh` and `ssh-keygen`.
 
 ### [0x0C. Web server](./0x0C-web_server/)
 
