@@ -137,7 +137,7 @@ Requirements:
 
 Note that this init script is far from being perfect (but good enough for the sake of manipulating process and PID file), for example we do not handle the case where we check if a process is already running when doing `./101-manage_my_process start`, in our case it will simply create a new process instead of saying that it is already started.
 
-File(s): [`101-manage_my_process, manage_my_process`](./101-manage_my_process, manage_my_process)
+File(s): [`101-manage_my_process`](./101-manage_my_process) [`manage_my_process`](./manage_my_process)
 
 ### :white_large_square: 11. Zombie
 Read what a [zombie process is](https://zombieprocess.wordpress.com/what-is-a-zombie-process/).
