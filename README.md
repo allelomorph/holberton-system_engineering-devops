@@ -9,6 +9,9 @@ DevOps component of the Holberton school core curriculum, which covers shell scr
 * Interpreter conditions:
   * Ubuntu 14.04 LTS
 * First line of executable scripts will be `#!/bin/bash`
+* Second line of all scripts should be a comment explaining its purpose
+* Linter compliance (after project 0x04)
+  * ShellCheck 0.3.3 (`shellcheck 0.3.3-1~ubuntu14.04.1`)
 
 ### Python
 * Interpreter conditions:
@@ -51,17 +54,23 @@ $ gem install puppet-lint -v 2.1.1
 
 ---
 
-### [0x00. Shell, basics](./0x00-shell_basics/)
+### [(205) 0x00. Shell, basics](./0x00-shell_basics/)
+Introduction to the Ubuntu Linux command line, and commonly used commands.
 
-### [0x01. Shell, permissions](./0x01-shell_permissions/)
+### [(207) 0x01. Shell, permissions](./0x01-shell_permissions/)
+Introduction to users, groups and permissions in Ubuntu Linux, and the relevant commonly used commands.
 
-### [0x02. Shell, I/O Redirections and filters](./0x02-shell_redirections/)
+### [(208) 0x02. Shell, I/O Redirections and filters](./0x02-shell_redirections/)
+Introducing Ubuntu Linux commands that are used in text manipulation and filtering; I/O redirection with special characters.
 
-### [0x03. Shell, init files, variables and expansions](./0x03-shell_variables_expansions/)
+### [(209) 0x03. Shell, init files, variables and expansions](./0x03-shell_variables_expansions/)
+Introduction to shell variables and aliases, their expansion, variable arithmatic, init files like `.bashrc` and `/etc/profile`, and relevant Ubuntu Linux commmands.
 
-### [0x04. Loops, conditions and parsing](./0x04-loops_conditions_and_parsing/)
+### [(251) 0x04. Loops, conditions and parsing](./0x04-loops_conditions_and_parsing/)
+Further exploration of Ubuntu Linux shell variable assignment and arithmatic; introduction of file test, control flow, and comparison operators.
 
-### [0x05. Processes and signals](./0x05-processes_and_signals/)
+### [(255) 0x05. Processes and signals](./0x05-processes_and_signals/)
+Intrduction to processes and signals in Linux, and the relevant Ubuntu shell commmands.
 
 ### [0x06. Regular expression](./0x06-regular_expressions/)
 
