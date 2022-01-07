@@ -90,24 +90,32 @@ Introduction to configuration management, continuous integration/continuous depl
 ### [(244) 0x0B. SSH](./0x0B-ssh/)
 Introduction to SSH basics: key pairs, authentication, and relevant Ubuntu Linux commands `ssh` and `ssh-keygen`.
 
-### [0x0C. Web server](./0x0C-web_server/)
+### [(266) 0x0C. Web server](./0x0C-web_server/)
+Introduction to Nginx and futher exploration of processes, HTTP, and web servers. Creating scripts to automate setup of the servers which will host the [AirBnB clone](https://github.com/allelomorph/holbertonschool-higher_level_programming/#airbnb-clone) projects.
 
-### [0x0D. Web stack debugging #0](./0x0D-web_stack_debugging_0/)
+### [(265) 0x0D. Web stack debugging #0](./0x0D-web_stack_debugging_0/)
+First of a series of projects that involve diagnosing and repairing a deliberately broken remote server/container.
 
-### [0x0E. Web stack debugging #1](./0x0E-web_stack_debugging_1/)
+### [(271) 0x0E. Web stack debugging #1](./0x0E-web_stack_debugging_1/)
+Second of a series of projects that involve diagnosing and repairing a deliberately broken remote server/container.
 
-### [0x0F. Load balancer](./0x0F-load_balancer/)
+### [(275) 0x0F. Load balancer](./0x0F-load_balancer/)
+Introduction to the use of load balancers to distribute traffic to redundant web servers.
 
-### [0x10. HTTPS SSL](./0x10-https_ssl/)
+### [(276) 0x10. HTTPS SSL](./0x10-https_ssl/)
+Introduction to adding security to a web stack using HTTPS and SSL termination, in this case with HAProxy.
 
-### 0x11. What happens when you type holbertonschool.com in your browser and press Enter
-This project did not have any code exercises, but instead consisted of a blog post and diagram concerning the classic interview question of how a web stack works in conjunction with the internet to visit an URL.
+### [(298) 0x11. What happens when you type google.com in your browser and press Enter](./0x11-what_happens_when_you_type/)
+Practicing being able to describe the full web stack, in text and in diagrams.
 
-### [0x12. Web stack debugging #2](./0x12-web_stack_debugging_2/)
+### [(287) 0x12. Web stack debugging #2](./0x12-web_stack_debugging_2/)
+Third of a series of projects that involve diagnosing and repairing a deliberately broken remote server/container.
 
-### [0x13. Firewall](./0x13-firewall/)
+### [(284) 0x13. Firewall](./0x13-firewall/)
+Introduction to improving web stack security by adding firewalls, in this case `ufw`.
 
-### [0x14. MySQL](./0x14-mysql/)
+### [(280) 0x14. MySQL](./0x14-mysql/)
+Introduction to adding databases to a web stack, specifically pimary and replica MySQL instances to parallel web servers. 
 
 ### [0x15. API](./0x15-api/)
 
