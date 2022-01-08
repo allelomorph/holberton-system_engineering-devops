@@ -117,20 +117,26 @@ Introduction to improving web stack security by adding firewalls, in this case `
 ### [(280) 0x14. MySQL](./0x14-mysql/)
 Introduction to adding databases to a web stack, specifically pimary and replica MySQL instances to parallel web servers. 
 
-### [0x15. API](./0x15-api/)
+### [(269) 0x15. API](./0x15-api/)
+Determining when bash scripting is no longer appropriate, and instead using Python to create a REST API to serve both CSV and JSON.
 
-### [0x16. API advanced](./0x16-api_advanced/)
+### [(314) 0x16. API advanced](./0x16-api_advanced/)
+Further practice querying APIs and parsing the JSON results.
 
-### [0x17. Web stack debugging #3](./0x17-web_stack_debugging_3/)
+### [(293) 0x17. Web stack debugging #3](./0x17-web_stack_debugging_3/)
+Fourth of a series of projects that involve diagnosing and repairing a deliberately broken remote server/container.
 
-### [0x18. Webstack monitoring](./0x18-webstack_monitoring/)
+### [(281) 0x18. Webstack monitoring](./0x18-webstack_monitoring/)
+Introduction to adding application and server monitoring to a web stack.
 
-### 0x19. Postmortem
-This project did not have any code exercises, but instead consisted of a writing assignment to practice producing a professional postmortem report of a failure from one of our web stack debugging projects, or one of our own experiences.
+### [(294) 0x19. Postmortem](./0x19-postmortem/)
+Practice in writing a proper report on the failure of a piece of software or web architecture.
 
-### [0x1A. Application server](./0x1A-application_server/)
+### [(311) 0x1A. Application server](./0x1A-application_server/)
+Understanding the use of an application server versus a web server; adding an application server to a web stack using Gunicorn, Flask, and Nginx.
 
-### [0x1B. Web stack debugging #4](./0x1B-web_stack_debugging_4/)
+### [(313) 0x1B. Web stack debugging #4](./0x1B-web_stack_debugging_4/)
+Fifth of a series of projects that involve diagnosing and repairing a deliberately broken remote server/container.
 
 ---
 
