@@ -14,6 +14,8 @@ Introduction to the use of load balancers to distribute traffic to redundant web
 
 ---
 
+![DevOps 0x0F](./MD_images/DO_0x0F.png)
+
 ## Mandatory Tasks
 
 ### :white_check_mark: 0. Double the number of webservers

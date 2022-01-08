@@ -14,6 +14,8 @@ Introduction to Nginx and futher exploration of processes, HTTP, and web servers
 
 ---
 
+![DevOps 0x0C](./MD_images/DO_0x0C.png)
+
 ## Mandatory Tasks
 
 ### :white_check_mark: 0. Transfer a file to your server

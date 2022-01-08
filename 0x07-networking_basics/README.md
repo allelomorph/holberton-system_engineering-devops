@@ -25,11 +25,15 @@ It is organized from the lowest level to the highest level:
 
 Keep in mind that the OSI model is a concept, it’s not even tangible. The OSI model doesn’t perform any functions in the networking process. It is a conceptual framework so we can better understand complex interactions that are happening. Most of the functionality in the OSI model exists in all communications systems.
 
+![DevOps 0x07 task 0a](./MD_images/DO_0x07_0a.png)
+
 In this project we will mainly focus on:
 * The Transport layer and especially TCP/UDP
 * On the Network layer with IP and ICMP
 
-The image bellow describes more concretely how you can relate to every level.
+The image below describes more concretely how you can relate to every level.
+
+![DevOps 0x07 task 0b](./MD_images/DO_0x07_0b.png)
 
 Questions:
 
@@ -46,6 +50,8 @@ How is the OSI model organized?
 File(s): [`0-OSI_model`](./0-OSI_model)
 
 ### :white_check_mark: 1. Types of network
+![DevOps 0x07 task 1](./MD_images/DO_0x07_1.png)
+
 LAN connect local devices together, WAN connects LANs together, and WANs are operating over the Internet.
 
 Questions:
@@ -68,6 +74,8 @@ What network do you use when you browse www.google.com from your smartphone (not
 File(s): [`1-types_of_network`](./1-types_of_network)
 
 ### :white_check_mark: 2. MAC and IP address
+![DevOps 0x07 task 2](./MD_images/DO_0x07_2.png)
+
 Questions:
 
 What is a MAC address?
@@ -83,6 +91,8 @@ What is an IP address?
 File(s): [`2-MAC_and_IP_address`](./2-MAC_and_IP_address)
 
 ### :white_check_mark: 3. UDP and TCP
+![DevOps 0x07 task 3](./MD_images/DO_0x07_3.png)
+
 Let’s fill the empty parts in the drawing above.
 
 Questions:

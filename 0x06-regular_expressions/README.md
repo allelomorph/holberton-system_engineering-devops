@@ -30,12 +30,16 @@ Requirements:
 * The regular expression must match `School`
 * Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
 
+![DevOps 0x06 task 0](./MD_images/DO_0x06_0.png)
+
 File(s): [`0-simply_match_school.rb`](./0-simply_match_school.rb)
 
 ### :white_check_mark: 1. Repetition Token #0
 Requirements:
 * Find the regular expression that will match the above cases
 * Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
+
+![DevOps 0x06 task 1](./MD_images/DO_0x06_1.png)
 
 File(s): [`1-repetition_token_0.rb`](./1-repetition_token_0.rb)
 
@@ -44,12 +48,16 @@ Requirements:
 * Find the regular expression that will match the above cases
 * Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
 
+![DevOps 0x06 task 2](./MD_images/DO_0x06_2.png)
+
 File(s): [`2-repetition_token_1.rb`](./2-repetition_token_1.rb)
 
 ### :white_check_mark: 3. Repetition Token #2
 Requirements:
 * Find the regular expression that will match the above cases
 * Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
+
+![DevOps 0x06 task 3](./MD_images/DO_0x06_3.png)
 
 File(s): [`3-repetition_token_2.rb`](./3-repetition_token_2.rb)
 
