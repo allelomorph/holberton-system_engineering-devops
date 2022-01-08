@@ -17,6 +17,8 @@ The web infrastructure installed in your [first web stack project](../0x09-web_i
 
 ---
 
+![DevOps 0x1A](./MD_images/DO_0x1A.jpg)
+
 ## Mandatory Tasks
 
 ### :white_check_mark: 0. Set up development with Python

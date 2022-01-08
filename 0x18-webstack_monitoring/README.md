@@ -14,6 +14,8 @@ Introduction to adding application and server monitoring to a web stack.
 
 ---
 
+![DevOps 0x18](./MD_images/DO_0x18.png)
+
 ## Mandatory Tasks
 
 ### :white_check_mark: 0. Sign up for Datadog and install datadog-agent

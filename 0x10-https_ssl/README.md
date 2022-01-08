@@ -14,6 +14,8 @@ Introduction to adding security to a web stack using HTTPS and SSL termination, 
 
 ---
 
+![DevOps 0x10](./MD_images/DO_0x10.png)
+
 ## Mandatory Tasks
 
 ### :white_check_mark: 0. World wide web

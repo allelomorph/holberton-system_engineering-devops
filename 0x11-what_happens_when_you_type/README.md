@@ -58,6 +58,10 @@ The diagram should show:
 
 [Gliffy](https://www.gliffy.com/) is recommended, but feel free to use what fits you best.
 
+Some unrelated examples:
+
+![DevOps 0x11 task 1](./MD_images/DO_0x11_1.png)
+
 <!--
 https://www.linkedin.com/pulse/what-happens-when-full-stack-samuel-pomeroy/?published=t
 https://www.linkedin.com/posts/activity-6703547184593420289-nCo3

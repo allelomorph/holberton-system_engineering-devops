@@ -14,6 +14,8 @@ Introduction to adding databases to a web stack, specifically pimary and replica
 
 ---
 
+![DevOps 0x14](./MD_images/DO_0x14.png)
+
 ## Mandatory Tasks
 
 ### :white_check_mark: 0. Install MySQL
