@@ -1,4 +1,4 @@
-B# holberton-system_engineering-devops
+# holberton-system_engineering-devops
 
 ## Description
 DevOps component of the Holberton school core curriculum, which covers shell scripts, networking, web stack architecture and debugging.
