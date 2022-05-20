@@ -64,10 +64,10 @@ Introduction to users, groups and permissions in Ubuntu Linux, and the relevant 
 Introducing Ubuntu Linux commands that are used in text manipulation and filtering; I/O redirection with special characters.
 
 ### [(209) 0x03. Shell, init files, variables and expansions](./0x03-shell_variables_expansions/)
-Introduction to shell variables and aliases, their expansion, variable arithmatic, init files like `.bashrc` and `/etc/profile`, and relevant Ubuntu Linux commmands.
+Introduction to shell variables and aliases, their expansion, variable arithmetic, init files like `.bashrc` and `/etc/profile`, and relevant Ubuntu Linux commmands.
 
 ### [(251) 0x04. Loops, conditions and parsing](./0x04-loops_conditions_and_parsing/)
-Further exploration of Ubuntu Linux shell variable assignment and arithmatic; introduction of file test, control flow, and comparison operators.
+Further exploration of Ubuntu Linux shell variable assignment and arithmetic; introduction of file test, control flow, and comparison operators.
 
 ### [(255) 0x05. Processes and signals](./0x05-processes_and_signals/)
 Intrduction to processes and signals in Linux, and the relevant Ubuntu shell commmands.

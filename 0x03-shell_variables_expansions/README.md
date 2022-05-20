@@ -10,7 +10,7 @@ Julien Barbier
 02-03-2020 to 02-04-2020
 
 ### Description
-Introduction to shell variables and aliases, their expansion, variable arithmatic, init files like `.bashrc` and `/etc/profile`, and relevant Ubuntu Linux commmands.
+Introduction to shell variables and aliases, their expansion, variable arithmetic, init files like `.bashrc` and `/etc/profile`, and relevant Ubuntu Linux commmands.
 
 ---
 

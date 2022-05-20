@@ -10,7 +10,7 @@ Sylvain Kalache
 06-19-2020 to 06-20-2020
 
 ### Description
-Further exploration of Ubuntu Linux shell variable assignment and arithmatic; introduction of file test, control flow, and comparison operators.
+Further exploration of Ubuntu Linux shell variable assignment and arithmetic; introduction of file test, control flow, and comparison operators.
 
 ---
 
